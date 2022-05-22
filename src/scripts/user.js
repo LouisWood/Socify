@@ -2,6 +2,7 @@ import axios from 'axios'
 
 axios.defaults.baseURL = 'https://socify-server.glitch.me/'
 axios.defaults.withCredentials = true
+axios.defaults.credentials = 'include'
 
 export const isUserLogged = async () => {
     const response = await axios.get('/logged')
