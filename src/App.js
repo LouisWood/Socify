@@ -8,6 +8,7 @@ import {
 } from 'react-router-dom'
 import { GlobalStyle } from './styles';
 import { Login, Profile, OtherUser, TopArtists, TopTracks, Playlists, Playlist, Dashboard, Users, Followed, Follower } from './pages';
+import { isUserLogged } from './scripts/user'
 
 
 /**
