@@ -273,7 +273,7 @@ const Dashboard = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-            const userSocket = io('https://socify-back.vercel.app/', {withCredentials: true})
+            const userSocket = io('https://socify-server.glitch.me/', {withCredentials: true})
             setSocket(userSocket)
 
             setProfile(await getCurrentUserProfile())
