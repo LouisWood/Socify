@@ -5,7 +5,7 @@ axios.defaults.withCredentials = true
 
 export const isUserLogged = async () => {
     const response = await axios.get('/logged')
-    return 'connected' in response.data ? connected : null
+    return 'connected' in response.data ? response.data.connected : null
 }
 
 export const getCurrentUserProfile = async () => {

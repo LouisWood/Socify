@@ -9,7 +9,7 @@ import {
 import { GlobalStyle } from './styles';
 import { Login, Profile, OtherUser, TopArtists, TopTracks, Playlists, Playlist, Dashboard, Users, Followed, Follower } from './pages';
 import { isUserLogged } from './scripts/user'
-
+import { catchErrors } from './utils'
 
 /**
  * Forcer les pages à s'afficher à partir du haut
@@ -31,9 +31,10 @@ function App() {
     const [connected, setConnected] = useState(false);
 
     useEffect(() => {
-        async () => {
+        const fetchData = async () => {
             setConnected(await isUserLogged())
         }
+        catchErrors(fetchData())
     }, []);
 
     /**
