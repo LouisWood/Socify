@@ -4,7 +4,7 @@ axios.defaults.baseURL = 'https://socify-server.glitch.me/'
 axios.defaults.withCredentials = true
 
 export const isUserLogged = async () => {
-    const response = await axios.get('/logged')
+    const response = await axios.get('/logged', {withCredentials: true})
     return 'connected' in response.data ? response.data.connected : null
 }
 
