@@ -1,0 +1,25 @@
+{
+  "name": "socify",
+  "version": "0.0.1",
+  "description": "socify",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "axios": "^0.26.1",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "encrypt-cookie": "^1.1.5",
+    "express": "~4.16.0",
+    "http": "^0.0.1-security",
+    "knex": "^0.16.5",
+    "socket.io": "^4.4.1",
+    "sqlite3": "^5.0.2"
+  },
+  "engines": {
+    "node": "16.x"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,72 @@
+diff --git a/node_modules/react-toastify/scss/_theme.scss b/node_modules/react-toastify/scss/_theme.scss
+index ca5e8ea..aeed0be 100644
+--- a/node_modules/react-toastify/scss/_theme.scss
++++ b/node_modules/react-toastify/scss/_theme.scss
+@@ -31,22 +31,22 @@
+ 
+ .#{$rt-namespace}__progress-bar {
+   &-theme--light {
+-    background: var(--toastify-color-progress-light);
++    background: #1DB954; //var(--toastify-color-progress-light);
+   }
+   &-theme--dark {
+-    background: var(--toastify-color-progress-dark);
++    background: #1DB954; //var(--toastify-color-progress-dark);
+   }
+   &--info {
+-    background: var(--toastify-color-progress-info);
++    background: #1DB954; //var(--toastify-color-progress-info);
+   }
+   &--success {
+-    background: var(--toastify-color-progress-success);
++    background: #1DB954; //var(--toastify-color-progress-success);
+   }
+   &--warning {
+-    background: var(--toastify-color-progress-warning);
++    background: #1DB954; //var(--toastify-color-progress-warning);
+   }
+   &--error {
+-    background: var(--toastify-color-progress-error);
++    background: #1DB954; //var(--toastify-color-progress-error);
+   }
+   &-theme--colored#{&}--info,
+   &-theme--colored#{&}--success,
+diff --git a/node_modules/react-toastify/scss/_variables.scss b/node_modules/react-toastify/scss/_variables.scss
+index 9644b02..fb86816 100644
+--- a/node_modules/react-toastify/scss/_variables.scss
++++ b/node_modules/react-toastify/scss/_variables.scss
+@@ -3,7 +3,7 @@ $rt-mobile: 'only screen and (max-width : 480px)' !default;
+ 
+ :root {
+   --toastify-color-light: #fff;
+-  --toastify-color-dark: #121212;
++  --toastify-color-dark: #191414;
+   --toastify-color-info: #3498db;
+   --toastify-color-success: #07bc0c;
+   --toastify-color-warning: #f1c40f;
+@@ -35,19 +35,11 @@ $rt-mobile: 'only screen and (max-width : 480px)' !default;
+   --toastify-spinner-color-empty-area: #e0e0e0;
+ 
+   // Used when no type is provided
+-  --toastify-color-progress-light: linear-gradient(
+-    to right,
+-    #4cd964,
+-    #5ac8fa,
+-    #007aff,
+-    #34aadc,
+-    #5856d6,
+-    #ff2d55
+-  );
++  --toastify-color-progress-light: #1DB954;
+   // Used when no type is provided
+-  --toastify-color-progress-dark: #bb86fc;
+-  --toastify-color-progress-info: var(--toastify-color-info);
+-  --toastify-color-progress-success: var(--toastify-color-success);
+-  --toastify-color-progress-warning: var(--toastify-color-warning);
+-  --toastify-color-progress-error: var(--toastify-color-error);
++  --toastify-color-progress-dark: #1DB954;
++  --toastify-color-progress-info: #1DB954; //var(--toastify-color-info);
++  --toastify-color-progress-success: #1DB954; //var(--toastify-color-success);
++  --toastify-color-progress-warning: #1DB954; //var(--toastify-color-warning);
++  --toastify-color-progress-error: #1DB954; //var(--toastify-color-error);
+ }

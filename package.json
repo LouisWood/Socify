@@ -1,0 +1,14 @@
+{
+  "devDependencies": {
+    "concurrently": "^7.0.0",
+    "nodemon": "^2.0.15"
+  },
+  "scripts": {
+    "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
+    "server": "cd server && nodemon server.js",
+    "client": "cd client && npm start",
+    "postinstall": "concurrently \"npm run postinstallServer\" \"npm run postinstallClient\"",
+    "postinstallServer": "cd server && npm install",
+    "postinstallClient": "cd client && npm install"
+  }
+}
