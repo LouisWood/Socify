@@ -61,7 +61,7 @@ const Login = () => (
             <StyledTitleHeader>Socify</StyledTitleHeader>
         </StyledTitleContainer>
         <StyledLoginContainer>
-            <StyledLoginButton href='socify-back.vercel.app/login'>Login to Spotify</StyledLoginButton>
+            <StyledLoginButton href='https://socify-iota.vercel.app//login'>Login to Spotify</StyledLoginButton>
         </StyledLoginContainer>
     </>
 );
