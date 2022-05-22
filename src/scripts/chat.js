@@ -1,5 +1,8 @@
 import axios from 'axios'
 
+axios.defaults.baseURL = 'socify-back.vercel.app'
+axios.defaults.withCredentials = true
+
 export const checkIfInDiscussion = (discussions, find) => {
     let found = false
 
