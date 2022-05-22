@@ -27,10 +27,12 @@ function ScrollToTop() {
 }
 
 function App() {
-    const [token, setToken] = useState(false);
+    const [connected, setConnected] = useState(false);
 
     useEffect(() => {
-        setToken(document.cookie.indexOf('userID=') !== -1 ? true : false);
+        async () => {
+            setConnected(await isUserLogged())
+        }
     }, []);
 
     /**
@@ -41,9 +43,7 @@ function App() {
         <div className="App">
             <GlobalStyle/>
             <header className="App-header">
-                {!token ? (
-                    <Login/>
-                ) : (
+                {connected ?
                     <>
                         <Router>
                             <ScrollToTop />
@@ -62,7 +62,9 @@ function App() {
                                 <Route path="*" element={<Navigate replace to="/"/>}/>
                             </Routes>
                         </Router>
-                    </>)
+                    </>
+                :
+                    <Login/>
                 }
             </header>
         </div>

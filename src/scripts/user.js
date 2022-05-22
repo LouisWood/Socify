@@ -3,6 +3,11 @@ import axios from 'axios'
 axios.defaults.baseURL = 'https://socify-server.glitch.me/'
 axios.defaults.withCredentials = true
 
+export const isUserLogged = async () => {
+    const response = await axios.get('/logged')
+    return 'connected' in response.data ? connected : null
+}
+
 export const getCurrentUserProfile = async () => {
     const response = await axios.get('/me')
     return 'res' in response.data ? response.data.res : null
