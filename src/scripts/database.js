@@ -4,7 +4,7 @@ axios.defaults.baseURL = 'https://socify-server.glitch.me/'
 axios.defaults.withCredentials = true
 
 export const getCurrentUser = async () => {
-    const response = await axios.get('bd/me/user')
+    const response = await axios.get('/bd/me/user')
     return response.data
 }
 
@@ -27,7 +27,7 @@ export const getCurrentUserTTrack = async (time_range) => {
 }
 
 export const getUser = async (userID) => {
-    const response = await axios.get('bd/user', {
+    const response = await axios.get('/bd/user', {
         params: {
             userID: userID
         }
@@ -46,7 +46,7 @@ export const getUserTArtist = async (userID, time_range) => {
 }
 
 export const getUserTTrack = async (userID, time_range) => {
-    const response = await axios.get('bd/top/track', {
+    const response = await axios.get('/bd/top/track', {
         params: {
             userID: userID,
             time_range: time_range
