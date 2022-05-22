@@ -27,14 +27,14 @@ const app = express()
 const server = require('http').Server(app)
 const io = require('socket.io')(server, {
     cors: {
-        origin: 'http://localhost:3000',
+        origin: 'https://socify-iota.vercel.app:3000',
         credentials: true,
         method: ['GET', 'POST']
     }
 })
 
 app.use(cors({
-    origin: 'http://localhost:3000',
+    origin: 'https://socify-iota.vercel.app:3000',
     credentials: true,
     method: ['GET', 'POST']
 }))
@@ -43,14 +43,14 @@ app.use(cookieParser(process.env.SIGNATURE_SECRET))
 app.use(encryptCookieNodeMiddleware(process.env.ENCRYPTION_SECRET))
 
 app.get('/', (req, res) => {
-    res.redirect('http://localhost:3000/')
+    res.redirect('https://socify-iota.vercel.app:3000/')
 })
 
 app.get('/login', (req, res) => {
     const userID = req.signedCookies ? req.signedCookies['userID'] : null
     
     if (userID) {
-        res.redirect('http://localhost:3000/')
+        res.redirect('https://socify-iota.vercel.app:3000/')
         return
     }
 
@@ -83,7 +83,7 @@ app.get('/callback', async (req, res) => {
     const userID = req.signedCookies ? req.signedCookies['userID'] : null
 
     if (userID) {
-        res.redirect('http://localhost:3000/')
+        res.redirect('https://socify-iota.vercel.app:3000/')
         return
     }
 
@@ -112,7 +112,7 @@ app.get('/callback', async (req, res) => {
                 await insertUserInDatabase(res, resUser.res, resToken.res, resTopA, resTopT)
         }
     }
-    res.redirect('http://localhost:3000/me')
+    res.redirect('https://socify-iota.vercel.app:3000/me')
 })
 
 app.get('/me', async (req, res) => {
@@ -672,7 +672,7 @@ app.post('/lastView', async (req, res) => {
 })
 
 app.get('*', (req, res) => {
-    res.redirect('http://localhost:3000/')
+    res.redirect('https://socify-iota.vercel.app:3000/')
 })
 
 io.use(decryptCookieSocketMiddleware(process.env.SIGNATURE_SECRET, process.env.ENCRYPTION_SECRET))

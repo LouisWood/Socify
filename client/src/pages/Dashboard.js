@@ -273,7 +273,7 @@ const Dashboard = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-            const userSocket = io('http://localhost:8000', {withCredentials: true})
+            const userSocket = io('https://socify-iota.vercel.app:8000', {withCredentials: true})
             setSocket(userSocket)
 
             setProfile(await getCurrentUserProfile())

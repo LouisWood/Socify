@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-axios.defaults.baseURL = 'http://localhost:8000'
+axios.defaults.baseURL = 'https://socify-iota.vercel.app:8000'
 axios.defaults.withCredentials = true
 
 export const getCurrentUser = async () => {

@@ -75,7 +75,7 @@ const refreshToken = async (refresh_token, res) => {
         if ('response' in error && 'status' in error.response && error.response.status === 401)
             deleteAndRedirect(res)
         else
-            res.redirect('http://localhost:3000')
+            res.redirect('https://socify-iota.vercel.app:3000')
         return true
     })
 
@@ -88,7 +88,7 @@ const deleteAndRedirect = (res) => {
     res.clearCookie('refresh_token')
     res.clearCookie('expireTime')
 
-    res.redirect('http://localhost:3000/')
+    res.redirect('https://socify-iota.vercel.app:3000/')
 }
 
 module.exports = { getAccessToken, checkIfTokenIsExpired, refreshToken, deleteAndRedirect }
