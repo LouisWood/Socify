@@ -724,14 +724,14 @@
     display: inline-block;
     margin-left: 20%;
     width: 29%;
-    font-size: 0.4 vw;
+    font-size: 0.5vw;
     color: rgba(255, 255, 255, 0.8)
 }
 
 .discussionResult .members {
     display: inline-block;
     width: 29%;
-    font-size: 0.4 vw;
+    font-size: 0.5vw;
     color: rgba(255, 255, 255, 0.8)
 }
 
@@ -806,13 +806,13 @@
     display: inline-block;
     margin-left: 20%;
     width: 29%;
-    font-size: 0.4 vw;
+    font-size: 0.5vw;
     color: rgba(255, 255, 255, 0.8)
 }
 
 .discussionsTrend .members {
     display: inline-block;
     width: 29%;
-    font-size: 0.4 vw;
+    font-size: 0.5vw;
     color: rgba(255, 255, 255, 0.8)
 }
