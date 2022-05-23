@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-axios.defaults.baseURL = 'https://socify-server.glitch.me/'
+axios.defaults.baseURL = 'https://socify-back.vercel.app/'
 axios.defaults.withCredentials = true
 
 /**
